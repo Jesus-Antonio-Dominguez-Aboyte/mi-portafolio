@@ -1,0 +1,495 @@
+html{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  background: rgb(79,79,87);
+background: linear-gradient(266deg, rgba(79,79,87,0.8239670868347339) 15%, rgba(206,206,226,0.835171568627451) 49%, rgba(247,249,250,1) 88%);
+  margin: 0;
+ 
+}
+.header-inicio {
+  min-height: 20vh;
+  background-color: rgba(128, 128, 128, 0.444);
+  /*
+  background-image: url(../img/fd-agua.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;*/
+  
+}
+
+.header-inicio .bloque {
+  display: flex;
+  
+  min-height: inherit;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.373);
+}
+
+
+.logo{
+  display: flex;
+  align-items: center;
+  
+}
+
+.logo img{
+  width: 400px;
+  height: 180px;
+  
+}
+
+
+/* botones menu*/
+
+ .pet{
+  
+  padding: 10px;
+  
+  
+ }
+
+ .btn{
+  background-color: transparent;
+  position: relative;
+  border: none;
+  margin-left: 20px;
+  width: 10rem;
+  height: 2.5rem;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+  overflow: hidden;
+  
+}
+
+.anim-bottom::after{
+content: "";
+position: absolute;
+bottom: 0;
+width: 0;
+height: .25rem;
+background-color: #d00;
+transition: width .5s ease, left .5s ease, right 0.5s ease;
+}
+
+.btn:hover{
+  color: orange;
+}
+
+ .anim-bottom:hover:after{
+  width: 100%;
+  
+}
+
+.to-left::after{
+  left: 0;
+  
+}
+
+.to-center::after{
+  left: 50%;
+}
+
+
+.to-center:hover::after{
+  left: 0;
+}
+
+.to-right::after{
+ right: 0;
+}
+
+
+
+/* fpto portada de section HISTORIA */
+.hero-image{
+  min-height: 50vh;
+  background-image: url(../img/equipo-p.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+  background-attachment: scroll;
+  background-attachment: fixed;
+  color: white;
+}
+
+.hero-image div{
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+background-color: rgba(0, 0, 0, 0.515);
+}
+.hero-image h1{
+  font-size: 5vw;
+}
+/* fpto portada de section PERSONAJES */
+.hero-image-2{
+  min-height: 50vh;
+  background-image: url(../img/personajes.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-attachment: scroll;
+  background-attachment: fixed;
+  color: white;
+}
+
+.hero-image-2 div{
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+background-color: rgba(0, 0, 0, 0.515);
+}
+.hero-image-2 h1{
+  font-size: 5vw;
+}
+
+/* foto portada de seccion IMAGENES*/
+
+.hero-image-3{
+  min-height: 50vh;
+  background-image: url(../img/FTP-IMGENES.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-attachment: scroll;
+  background-attachment: fixed;
+  color: white;
+}
+
+.hero-image-3 div{
+  min-height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+background-color: rgba(0, 0, 0, 0.515);
+}
+.hero-image-3 h1{
+  font-size: 5vw;
+}
+
+/*esto es otro apartado fuera del header como los son parrafos con imagenes*/
+
+.hist-1{
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+  .img-p1 img{
+    margin: 15px;
+ width: 30vw;
+ height: 50vh;
+ border-radius: 52px 103px 34px 103px;
+ box-shadow: 5px 5px 2px;
+transition: transform .5s;
+} 
+/*efecto al pasar cursor en imagen */
+.img-p1 img:hover {
+  transition:.5s ease-in-out .5s;
+  transform:scale(.9);
+}
+
+.hist-1 .parrafo-1{
+  background-color: rgba(121, 121, 118, 0.575);
+  color: white;
+  margin: 15px ;
+  padding: 5rem;
+  font-size:large;
+ text-align: justify;
+ line-height: 1.5;
+ border-radius: 12px;
+}
+
+
+/* <<<<<<<<<<<<<<<<<   seccion de  contenido personajes */
+
+.content-per{
+  
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  
+}
+
+.content-per .card{
+
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.content-per .card .contenido{
+  display: flex;
+  justify-content: space-evenly;
+  
+  background-color: transparent;
+  flex-direction: row;
+  width: inherit;
+}
+
+.content-per .card .contenido img{
+  display: flex;
+  
+  width: 20vw;
+ height: 50vh;
+ margin-left: 30px;
+}
+
+.content-per .card .contenido .descripcion h2{
+  text-align: center;
+  font-style: italic;
+}
+
+.content-per .card .contenido .descripcion{
+  display: flex;
+  width: 50%;
+  padding: 10px;
+  flex-direction: column;
+  background-color: rgba(121, 121, 118, 0.575);
+  border-radius: 50px 35px 75px 16px;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8 );
+  text-align: justify;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 3rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+.galeria{
+  display: flex;
+  width: 900px;
+  height: 430px;
+  margin: 0 auto;
+}
+
+.galeria img{
+  width:0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+
+.galeria img:hover{
+  cursor: crosshair;
+  width: 300px;
+  opacity: 1;
+  filter: contrast(120%);
+}
+/*flecha que lleva al lector hacia arriba*/
+
+.material-symbols-outlined {
+ 
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 40
+}
+
+.botonArriba {
+  position: fixed;
+  color: orangered;
+  bottom: 20px;
+  right: 40px;
+  height: 40px;
+  width: 40px;
+  padding: 15px;
+   transition: all .2s;
+}
+
+.material-symbols-outlined:hover{
+  background-color: black;
+  border-radius: 50%;
+  padding: 5px;
+}
+
+
+/* contenido del footer */
+
+.footer{
+  display: flex;
+  justify-content: space-around;
+   min-height: 15vh;
+   padding: 5px;
+  background-color: rgba(0, 0, 0, 0.373);
+}
+
+.footer .contenido-1 {
+  
+  
+  padding: 5px;
+  text-align: center;
+  font-size:x-large;
+  font-style: italic;
+  font-family:fantasy 
+}
+
+.footer .contenido-1 img{
+  
+
+  width: 80px;
+  height:80px;
+}
+
+.footer .contenido-2{
+  display: flex;
+   align-content: center;
+  
+}
+
+.footer .contenido-2 h2{
+  color: white;
+  text-shadow: 2px 3px black;
+   text-align: center;
+  font-size: 50px;
+  font-style: italic;
+  font-family:fantasy ;
+}
+
+.footer .contenido-2 img{
+  width: 130px;
+  height:200px;
+}
+
+/*estos efectos tendra al ser responsive*/
+
+@media (max-width: 680px){
+  /*Corresponde al menu o encabezado*/
+  .header-inicio .bloque{
+    flex-direction: column;
+  }
+  .header-inicio .bloque .text{
+    font-size: 1rem;
+  }
+
+  .bloque .nav-link{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px 0px;
+  }
+  /* Corresponde a foto de titulo de articulo */
+  .hero-image{
+    min-height: 20vh;
+  }
+  /*corresponde al prime parrafo con imagen y texto*/
+   .hist-1{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.373);
+  margin: 0 auto;
+  }
+  
+  .img-p1 img{
+    display: flex;
+
+    margin: 10px auto;
+   border: none;
+   width: 50vw;
+ height: 20vh;
+ }
+
+ 
+  
+ .hist-1 .parrafo-1{
+  background-color: rgba(121, 121, 118, 0.575);
+  color: white;
+  margin: 0 auto ;
+  padding: 2rem;
+  font-size:large;
+ text-align: justify;
+ line-height: 1.5;
+ border-radius: 12px;
+}
+
+}
+
+@media (max-width: 844px){
+  /*Corresponde al menu o encabezado*/
+  .header-inicio .bloque{
+    flex-direction: row;
+  }
+  .header-inicio .bloque .text{
+    font-size: 1rem;
+    
+  }
+
+  .bloque .nav-link{
+    align-items: center;
+    justify-content: right;
+    font-size: 1rem;
+    
+  }
+  /* Corresponde a foto de titulo de articulo */
+  .hero-image{
+    min-height: 35vh;
+  }
+  /*corresponde al prime parrafo con imagen y texto*/
+   .hist-1{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.373);
+  margin: 0 auto;
+  }
+  
+  .img-p1 img{
+    display: flex;
+
+    margin: 10px auto;
+   border: none;
+   width: 50vw;
+ height: 50vh;
+ }
+
+ 
+  
+ .hist-1 .parrafo-1{
+  background-color: rgba(121, 121, 118, 0.575);
+  color: white;
+  margin: 0 auto ;
+  padding: 2rem;
+  font-size:large;
+ text-align: justify;
+ line-height: 1.5;
+ border-radius: 12px;
+}
+
+}
+
+
+
